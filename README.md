@@ -1,19 +1,12 @@
 import java.util.Scanner;
-class LargestNumber
+class String
 {
 public static void main(String args[])
 {
 Scanner sc=new Scanner(System.in);
-int a=sc.nextInt();
-int b=sc.nextInt();
-if(a>b)
-{
-System.out.println("the biggest value is:"+a);
-}
-else
-{
-System.out.println("the biggest value is:"+b);
-}
+System.out.print("enter word:");
+string s=sc.next();
+System.out.print("string is:"+s);
 }
 }
 
