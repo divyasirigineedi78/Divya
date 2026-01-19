@@ -1,12 +1,14 @@
 import java.util.Scanner;
-class String2
-{
-public static void main(String args[])
-{
-Scanner sc=new Scanner(System.in);
-System.out.print("enter sentence:");
-String s=sc.nextLine();
-System.out.print("string is:"+s);
-}
+
+class CharExample {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a character: ");
+        char ch = sc.next().charAt(0);
+
+        System.out.println("You entered: " + ch);
+    }
 }
 
