@@ -1,7 +1,8 @@
 import java.util.Scanner;
-
-class CharExample {
-    public static void main(String[] args) {
+class CharExample
+{
+    public static void main(String[] args)
+    {
 
         Scanner sc = new Scanner(System.in);
 
