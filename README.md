@@ -1,18 +1,13 @@
 import java.util.Scanner;
 
-class Largest {
+class Factorial{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int c = sc.nextInt();
-
-        if (a > b && a > c)
-            System.out.println(a + " is largest");
-        else if (b > c)
-            System.out.println(b + " is largest");
-        else
-            System.out.println(c + " is largest");
+        int n= sc.nextInt();
+        fact=1;
+        for(int i=1;i<=n;i++){
+        fact=fact*i;
+    System.out.println("factorial is:"+fact);
     }
-}
+    }
 
