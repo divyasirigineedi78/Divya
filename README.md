@@ -10,4 +10,4 @@ class Factorial{
     System.out.println("factorial is:"+fact);
     }
     }
-
+}
