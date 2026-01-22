@@ -1,15 +1,16 @@
 
 import java.util.Scanner;
 
-class Factorial {
+class ReverseNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int fact = 1;
+        int rev=0;
 
-        for (int i = 1; i <= n; i++) {
-            fact = fact * i;
+        while(n!=0){
+         rev=rev*10+n%10;
+         int n=n/10;
         }
-        System.out.println("Factorial = " + fact);
+        System.out.println("reverse = " + rev);
     }
-}
+    }
