@@ -1,8 +1,7 @@
 
 import java.util.Scanner;
-
 class SumOfDigit{
-    public static void main(String[] args) {
+    public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int r,s=0;
@@ -12,6 +11,6 @@ class SumOfDigit{
          s=s+r;
          n=n/10;
         }
-        System.out.println("sum"+s);
+        System.out.println("sum:"+s);
     }
     }
