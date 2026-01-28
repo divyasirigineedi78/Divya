@@ -7,10 +7,10 @@ class SumOfArray
         int n=sc.nextInt();
         int arr[]=new int[];
         int sum=0;
-        for(i=1;i<=n;i++){
+        for(int i=0;i<n;i++){
         arr[i]=sc.nextInt();
         sum+=arr[i];
-        System.out.println("sum of array"+sum);
         }
+        System.out.println("sum of array"+sum);
   }
 }
