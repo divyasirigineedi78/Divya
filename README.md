@@ -1,17 +1,16 @@
 import java.util.Scanner;
-class Fibonacci
+class SumOfArray
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
-        int a=0,b=1;
-        System.out.print(a+" "+b);
-        for(int i=3;i<=n;i++){
-        int c=a+b;
-        System.out.print(" "+c);
-        a=b;
-        b=c;
-    }
+        int arr[]=new int[];
+        int sum=0;
+        for(i=1;i<=n;i++){
+        arr[i]=sc.nextInt();
+        sum+=arr[i];
+        System.out.println("sum of array"+sum);
+        }
   }
 }
