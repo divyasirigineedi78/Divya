@@ -11,6 +11,6 @@ class ArraySum {
      arr[i]=sc.nextInt();
      System.out.print("reverse array:")
      for(i=n-1;i>=0;i--)
-        System.out.println(arr[i]+" ");
+        System.out.println(arr[i]);
     }
 }
