@@ -1,16 +1,15 @@
 import java.util.Scanner;
-
-class ArraySum {
+class VowelOrConsonent{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter array size:");
-        int n=sc.nextInt();
-        System.out.print("enter array elements:");
-        int arr[] = new int[n];
-     for(int i=0;i<n;i++)
-     arr[i]=sc.nextInt();
-     System.out.print("reverse array:")
-     for(i=n-1;i>=0;i--)
-        System.out.println(arr[i]);
+        Scanner sc=new Scanner(System.in);
+        char ch=sc.next().charAt(0);
+        if(ch>='a'&&ch<='z'||ch>='A'&&ch<='Z')
+        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+        System.out.print("vowel");
+        else
+        System.out.print("consonant");
+        else
+        System.out.print("not alphabet");
     }
 }
+    
