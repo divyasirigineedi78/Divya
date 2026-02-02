@@ -1,16 +1,15 @@
 import java.util.Scanner;
-class Main
-{
-    public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        char ch=sc.next().charAt(0);
-        if(ch>='0'&&ch<='9')
-        System.out.print("digit");
-       else if(ch>='a'&&ch<='z'||ch>='A'&&ch<='Z')
-        System.out.print("character");
-        else
-        System.out.print("not a char not a digit");
+class Main {
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine(); 
+   int count=0;
+   for(int i=0;i<s.length();i++){
+    char ch=s.charAt(i);
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+    count++;
+   }
+    System.out.println("char count"+count);
     }
-    
 }
     
