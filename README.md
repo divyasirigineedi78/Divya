@@ -1,17 +1,22 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
-class ArraySort {
+class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int arr[] = new int[n];
-        for(int i=0;i<n;i++)
-            arr[i] = sc.nextInt();
 
-        Arrays.sort(arr);
+        int T = sc.nextInt();   // number of test cases
 
-        for(int x : arr)
-            System.out.print(x + " ");
+        while (T-- > 0) {
+            int temp = sc.nextInt();
+            int humidity = sc.nextInt();
+
+            if (temp > 30 && humidity > 90) {
+                System.out.println("Hot and Humid");
+            } 
+            else (temp > 30) {
+                System.out.println("Hot");
+            } 
+        
+            }
+        }
     }
-}
