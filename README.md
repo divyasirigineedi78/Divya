@@ -1,26 +1,18 @@
 import java.util.Scanner;
 
-class Main {
+class DuplicateArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
 
-        int T = sc.nextInt();
+        for(int i=0;i<n;i++)
+            arr[i] = sc.nextInt();
 
-        while (T-- > 0) {
-            int temp = sc.nextInt();
-            int humidity = sc.nextInt();
-
-            if (temp >= 30 && humidity >= 90) {
-                System.out.println("Hot and Humid");
-            }
-            else if (temp >= 30 && humidity < 90) {
-                System.out.println("Hot");
-            }
-            else if (temp < 30 && humidity >= 90) {
-                System.out.println("Cool and Humid");
-            }
-            else {
-                System.out.println("Cool");
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if(arr[i] == arr[j])
+                    System.out.println("Duplicate: " + arr[i]);
             }
         }
     }
