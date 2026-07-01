@@ -1,75 +1,37 @@
-tasks = []
+print("===== SIMPLE CALCULATOR =====")
 
-def show_menu():
-    print("\n===== TO-DO LIST =====")
-    print("1. Add Task")
-    print("2. View Tasks")
-    print("3. Update Task")
-    print("4. Delete Task")
-    print("5. Mark Task as Completed")
-    print("6. Exit")
+# Input numbers
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
 
-while True:
-    show_menu()
-    choice = input("Enter your choice (1-6): ")
+# Operation
+print("\nChoose an operation:")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
 
-    if choice == "1":
-        task = input("Enter new task: ")
-        tasks.append({"task": task, "completed": False})
-        print("Task added successfully!")
+choice = input("Enter your choice (1/2/3/4): ")
 
-    elif choice == "2":
-        if not tasks:
-            print("No tasks available.")
-        else:
-            print("\nYour Tasks:")
-            for i, t in enumerate(tasks, start=1):
-                status = "✓" if t["completed"] else "✗"
-                print(f"{i}. {t['task']} [{status}]")
+# Perform calculation
+if choice == "1":
+    result = num1 + num2
+    print("Result =", result)
 
-    elif choice == "3":
-        if not tasks:
-            print("No tasks to update.")
-        else:
-            for i, t in enumerate(tasks, start=1):
-                print(f"{i}. {t['task']}")
-            index = int(input("Enter task number to update: ")) - 1
-            if 0 <= index < len(tasks):
-                new_task = input("Enter updated task: ")
-                tasks[index]["task"] = new_task
-                print("Task updated successfully!")
-            else:
-                print("Invalid task number.")
+elif choice == "2":
+    result = num1 - num2
+    print("Result =", result)
 
-    elif choice == "4":
-        if not tasks:
-            print("No tasks to delete.")
-        else:
-            for i, t in enumerate(tasks, start=1):
-                print(f"{i}. {t['task']}")
-            index = int(input("Enter task number to delete: ")) - 1
-            if 0 <= index < len(tasks):
-                removed = tasks.pop(index)
-                print(f"Deleted task: {removed['task']}")
-            else:
-                print("Invalid task number.")
+elif choice == "3":
+    result = num1 * num2
+    print("Result =", result)
 
-    elif choice == "5":
-        if not tasks:
-            print("No tasks available.")
-        else:
-            for i, t in enumerate(tasks, start=1):
-                print(f"{i}. {t['task']}")
-            index = int(input("Enter task number to mark as completed: ")) - 1
-            if 0 <= index < len(tasks):
-                tasks[index]["completed"] = True
-                print("Task marked as completed!")
-            else:
-                print("Invalid task number.")
-
-    elif choice == "6":
-        print("Thank you for using To-Do List!")
-        break
-
+elif choice == "4":
+    if num2 != 0:
+        result = num1 / num2
+        print("Result =", result)
     else:
-        print("Invalid choice! Please try again.")
+        print("Error: Division by zero is not allowed.")
+
+else:
+    print("Invalid choice! Please select 1, 2, 3, or 4.")
