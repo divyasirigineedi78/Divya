@@ -1,37 +1,10 @@
-print("===== SIMPLE CALCULATOR =====")
+import random
+import string
 
-# Input numbers
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+length = int(input("Enter the password length: "))
 
-# Operation
-print("\nChoose an operation:")
-print("1. Addition (+)")
-print("2. Subtraction (-)")
-print("3. Multiplication (*)")
-print("4. Division (/)")
+characters = string.ascii_letters + string.digits + string.punctuation
 
-choice = input("Enter your choice (1/2/3/4): ")
+password = "".join(random.choice(characters) for _ in range(length))
 
-# Perform calculation
-if choice == "1":
-    result = num1 + num2
-    print("Result =", result)
-
-elif choice == "2":
-    result = num1 - num2
-    print("Result =", result)
-
-elif choice == "3":
-    result = num1 * num2
-    print("Result =", result)
-
-elif choice == "4":
-    if num2 != 0:
-        result = num1 / num2
-        print("Result =", result)
-    else:
-        print("Error: Division by zero is not allowed.")
-
-else:
-    print("Invalid choice! Please select 1, 2, 3, or 4.")
+print("Generated Password:", password)
